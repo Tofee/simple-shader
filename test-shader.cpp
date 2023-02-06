@@ -56,7 +56,7 @@ public:
     eglInitialize(display, 0, 0);
 
     const EGLint attribs[] = {EGL_RENDERABLE_TYPE,
-                              EGL_OPENGL_ES3_BIT,
+                              EGL_OPENGL_ES_BIT,
                               EGL_BLUE_SIZE,
                               8,
                               EGL_GREEN_SIZE,
@@ -76,8 +76,8 @@ public:
       return false;
     }
 
-    const EGLint context_attribs[] = {EGL_CONTEXT_MAJOR_VERSION, 3,
-                                      EGL_CONTEXT_MINOR_VERSION, 1, EGL_NONE};
+    const EGLint context_attribs[] = {EGL_CONTEXT_MAJOR_VERSION, 2,
+                                      EGL_CONTEXT_MINOR_VERSION, 0, EGL_NONE};
 
     context_ = eglCreateContext(display, config, nullptr, context_attribs);
 
