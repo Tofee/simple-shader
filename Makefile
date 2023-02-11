@@ -7,3 +7,6 @@ test-shader:
 install:
 	install -m 0775 test-shader $(DESTDIR)/test-shader
     
+clean:
+	rm -f test-shader
+    
